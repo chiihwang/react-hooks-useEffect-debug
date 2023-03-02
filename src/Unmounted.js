@@ -1,10 +1,13 @@
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const Unmounted = () => {
+  //Error: missing  push
+  const history = useHistory();
+
   return (
-    <div className='unmounted'>
+    <div className="unmounted">
       <h1>Welcome</h1>
-      <button onClick={() => history.pus('/mount')}>Login</button>
+      <button onClick={() => history.push("/mount")}>Login</button>
     </div>
   );
 };
